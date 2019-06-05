@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>새 탭</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            /* content-box */
+        }
+        body {
+            color: white;
+            background-color: rgb(50,49,50);
+        }
+        .top__header {
+            display: flex;
+            font-size: 13px;
+            margin-top: 25px;
+            margin-bottom: 100px;
+            margin-right: 30px;
+            justify-content: flex-end;
+        }
+        .top__menu {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .site-title {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 60px;
+            cursor: pointer;
+        }
+        .site__search {
+            width: 350px;
+            height: 40px;
+            background: white;
+            color: black;
+            border-radius: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 40px;
+        }
+        .site__search input{
+            border: none;
+            width: 100%;
+            font-size: 13px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .site-minimap {
+            display: flex;
+            padding: 0px 5px;
+            cursor: pointer;
+        }
+        .site-minimap .minimap{
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 100px;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            margin: 5px;
+            position: relative;
+        }
+        .site-minimap .minimap:last-child{
+            font-size: 20px;
+        }
+        .site-minimap .minimap:last-child i{
+            width: 40px;
+            height: 40px;
+            color: rgb(50,49,50);
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .site-minimap .minimap .site-name{
+            color: rgb(50,49,50);
+            background-color: white;
+            border-radius: 45px;
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            height: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-top: 15px;
+
+            position: absolute;
+            bottom: 0;
+        }
+        .user-settings {
+            background-color: white;
+            width: 120px;
+            height: 30px;
+            color: rgb(26,115,232);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 14px;
+            /* align-items: center; */
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="top__header">
+        <div class="top__menu">Gmail</div>
+        <div class="top__menu">이미지</div>
+        <div class="top__menu">
+            <i class="fas fa-th fa-lg"></i>
+        </div>
+    </header>
+    <main>
+        <div class="site-title">Google</div>
+        <div class="site__search">
+            <input type="text" placeholder="Google 검색 또는 URL 입력">
+            <i class="fas fa-microphone"></i>
+        </div>
+        <div class="site-minimap">
+            <div class="minimap">
+                <div class="site icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="site-name">Youtube</div>
+            </div>
+            <div class="minimap">
+                <div class="site icon">
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                <div class="site-name">Facebook</div>
+            </div>
+            <div class="minimap">
+                <div class="site icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="site-name">instagram</div>
+            </div>
+            <div class="minimap">
+                <div class="site icon">
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                <div class="site-name">Facebook</div>
+            </div>
+            <div class="minimap">
+                <div class="site icon">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="site-name">바로가기 추가</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="user-settings">
+            <span>
+                <i class="fas fa-pen"></i>
+                맞춤 설정
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
